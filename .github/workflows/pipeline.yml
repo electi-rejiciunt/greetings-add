@@ -56,7 +56,7 @@ jobs:
         
     - name: Set output
       id: setoutput
-      run: ls -l >> $GITHUB_OUTPUT && echo jarpath=build/libs/greetings-add-${{ github.event.inputs.myVersion }}${{ env.TDS }}.jar >> $GITHUB_OUTPUT
+      run: echo jarpath=build/libs/greetings-add-${{ github.event.inputs.myVersion }}${{ env.TDS }}.jar >> $GITHUB_OUTPUT
       
   print-build-output:
     runs-on: ubuntu-latest
